@@ -60,7 +60,8 @@ function Citycard() {
             })
             setMessage('成功了！！！');
         } catch (error) {
-            setMessage('失败！');
+            console.error('获取天气数据失败：', error);
+            setMessage('数据加载失败');
         }
     }
     // Fetch weather data once when the component mounts
